@@ -192,15 +192,6 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Keybinds to make split resizing easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<leader>Rh', '<C-w><', { desc = 'Decrease split width' })
-vim.keymap.set('n', '<leader>Rl', '<C-w>>', { desc = 'Increase split width' })
-vim.keymap.set('n', '<leader>Rj', '<C-w>-', { desc = 'Decrease split height' })
-vim.keymap.set('n', '<leader>Rk', '<C-w>+', { desc = 'Increase split height' })
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -331,6 +322,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
+        { '<leader>T', group = '[T]erminal' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
